@@ -12,9 +12,21 @@ class App extends Component {
 
   //Your code here:
 
+  componentDidMount() {
+    this.handleAddTimer();
+  }
 
-
-
+  render() {
+    return(
+      <div className="App">
+        <h1>MultiTimer</h1>
+        <button onClick={this.handleAddTimer}>Add New Timer</button>
+        <div className="TimerGrid">
+          {this.renderTimers()}
+        </div>
+      </div>
+    )
+  }
 
 
 
